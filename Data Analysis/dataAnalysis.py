@@ -6,7 +6,7 @@ import os
 import xlsxwriter
 
 # Define the main function for booking activity analysis and plotting
-def plot_combined_booking_activity_analysis_and_display_table(file_path):
+def plot_booking_activity_analysis_and_display_table(file_path):
     # Reads the CSV file, also skips the first row which is assumed to be a header if it is necessary
     df = pd.read_csv(file_path, skiprows=1)
     # for easier manioulation, Convert the 'Created Date' column to datetime format
@@ -120,7 +120,7 @@ def plot_combined_booking_activity_analysis_and_display_table(file_path):
     print(f"Excel file saved successfully: {excel_filepath}")
 
 # Add the CSV file path here where the data files are located. Example D19.csv
-file_path = ''
+file_path = 'C:\\Users\\Jyothesh karnam\\Desktop\\collaborative application development\\Data Files\\SRM22.csv'
 # Call the function
-plot_combined_booking_activity_analysis_and_display_table(file_path)
+plot_booking_activity_analysis_and_display_table(file_path)
 
