@@ -1,4 +1,8 @@
 
+"""This script performs data analysis on all the csv files."""
+"""This script also downloads the graph into a folder named Images and creates one if there isn't a folder named images."""
+"""This script also downloads a report into a folder named reports and creates one if there isn't a folder named reports."""
+
 
 # All the necassary libraries are imported 
 import pandas as pd
