@@ -16,3 +16,6 @@ the folder contains the code for  ARIMA, SARIMAX regression and exponetial Smoot
 Time series models:
 Logistic regression used to predict how many people would be present at an event based on Elastic Net regression that was used for the forecasting. A GUI was used to present these results.
 
+## Architecture and maintained workflow
+
+See [technical architecture, diagrams, engineering decisions, checks and scaling limits](docs/ARCHITECTURE.md). Maintenance dated 11 November 2026 is separate from the original learning/coursework source.
