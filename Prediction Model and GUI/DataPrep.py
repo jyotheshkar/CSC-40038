@@ -1,6 +1,6 @@
 import pandas as pd
 import os
-import glob
+from pathlib import Path
 
 df_dict = {}  # Create a dictionary to store the dataframes for each file of a target audience
 
@@ -18,7 +18,7 @@ def csv_extracter(filename):
     df_raw = raw_data[
         [booking_ref, date]].copy()  # Create a new dataframe with only the booking reference and date columns
     df_raw.rename(columns={booking_ref: "Booking Reference", date: "Date"}, inplace=True)  # Rename the columns
-    df_raw.loc[:, "Date"] = pd.to_datetime(df_raw["Date"], dayfirst=True,
+    df_raw["Date"] = pd.to_datetime(df_raw["Date"], dayfirst=True,
                                            errors="coerce")  # Convert the date column to datetime format
     df_raw.sort_values(by="Date",
                        inplace=True)  # Sort the dataframe by date. Not using mergesort because the order of entries with same date is not important.
@@ -34,20 +34,22 @@ def csv_extracter(filename):
     df_raw['Booking Reference'] = df_raw['Booking Reference'].fillna(
         "none")  # Fill the booking references corresponding to the newly added dates with "none". This will ensure booking counts are not affected by these records
 
-    df_dict["df_" + filename] = df_raw  # Add the dataframe to the dictionary with the filename as the key
+    df_dict["df_" + Path(filename).name] = df_raw  # Add the dataframe to the dictionary with the filename as the key
     return df_dict
 
 
 """Extract data from csv files from code directory and store in a dataframe dictionary"""
-path = os.getcwd()
-for name in glob.glob(path + "\*.csv"):
-    if "_Imputed" not in name:
-        filename = os.path.basename(name)
-        csv_extracter(filename)
-
-"""Add Event Dates to a List"""
-event_dates = ["19/11/2019", "09/12/2021", "22/04/2021", "24/03/2021", "09/11/2021", "15/06/2022", "08/06/2023"]
-event_dates = pd.to_datetime(event_dates, dayfirst=True)  # Convert the event dates to datetime format
+# Resolve shipped datasets beside this module, independently of the shell directory.
+# Explicit names preserve event pairing; filesystem enumeration order is not a schema.
+event_manifest = {
+    "D19.csv": "19/11/2019", "D21.csv": "09/12/2021", "GP21.csv": "22/04/2021",
+    "MSE21.csv": "24/03/2021", "NP21.csv": "09/11/2021", "SRM22.csv": "15/06/2022",
+    "SRM23.csv": "08/06/2023",
+}
+path = Path(__file__).resolve().parent
+for filename in event_manifest:
+    csv_extracter(path / filename)
+event_dates = pd.to_datetime(list(event_manifest.values()), dayfirst=True)
 
 """Remove bookings made after the event date from corresponding dataframe in the dataframe dictionary"""
 for key, event_date in zip(df_dict.keys(), event_dates):
@@ -94,7 +96,7 @@ for key, event_date in zip(df_dict.keys(), event_dates):
     mean_booking_count = df_weeks_dict[key]["Booking Count"].mean()
     std_booking_count = df_weeks_dict[key]["Booking Count"].std(ddof=0)
     df_weeks_dict[key]["Z Score"] = df_weeks_dict[key]["Booking Count"].apply(
-        lambda x: (x - mean_booking_count) / std_booking_count)  # Add a column for z scores in the weeks dataframe
+        lambda x: (x - mean_booking_count) / std_booking_count if std_booking_count else 0.0)  # Add a column for z scores in the weeks dataframe
 
     df_weeks_noads_dict[key] = df_weeks_dict[key].copy()  # Create a new copy of each weekwise dataframe
     df_weeks_noads_dict[key] = df_weeks_noads_dict[key].drop(df_weeks_noads_dict[key][df_weeks_noads_dict[key][
