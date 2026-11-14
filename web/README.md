@@ -9,3 +9,5 @@ Sites deployment is pending. Original Python analytics + desktop GUI source rema
 The browser workbench uses seven invented weekly counts and descriptive z-scores. It does not run the original regression/classification models or measure their performance.
 
 The source passes JavaScript syntax checks and deterministic calculation checks recorded in the task verification report; full browser/layout and original-application validation require a browser and the original runtime.
+
+See [reproducible verification](VERIFICATION.md) and run `node web/verify.cjs`.
