@@ -1,5 +1,7 @@
 # Collaborative Application Development - CSC-40038 - Keele University
 
+[![Repository checks](https://github.com/jyotheshkar/Collaborative-Application-Development-CSC-40038-Keele-University/actions/workflows/maintenance.yml/badge.svg)](https://github.com/jyotheshkar/Collaborative-Application-Development-CSC-40038-Keele-University/actions/workflows/maintenance.yml) ![Verified module mark: 77%](https://img.shields.io/badge/Verified_module_mark-77%25-1769aa)
+
 Explore conference booking patterns, compare prediction approaches and communicate results through a graphical application.
 
 | Academic record | Verified value |
@@ -39,6 +41,6 @@ Original application files, GUI structure and data schemas remain in the reposit
 - [System and deployment architecture, decisions, contracts and validation](docs/ENGINEERING.md)
 - [Web edition and verification](web/README.md)
 
-Supporting original repositories should be preserved under `original-work/`: Data-Analytics.
+[Original supporting coursework](original-work/Data-Analytics/) has been consolidated into this repository with a file-level import provenance record. The source repository remains available pending your deletion decision.
 
 University-authored documents retain their own notices. The repository’s code licence does not automatically license third-party teaching materials or datasets.
