@@ -1,27 +1,44 @@
 # Collaborative Application Development - CSC-40038 - Keele University
 
-Classification Models:
-Uses three methods to train and test the data, to give overall accuracy scores for future predictions.
+Explore conference booking patterns, compare prediction approaches and communicate results through a graphical application.
 
-Data Analysis:
-The data analysis folder runs the analysis on the raw data to give an insight on the data set.
+| Academic record | Verified value |
+|---|---|
+| Programme | MSc Computer Science, Keele University |
+| Academic year | 2023/24 |
+| Final module mark | **77%** |
+| Credit | 15 CATS |
+| Original project | Conference booking analysis and forecasting |
+| Original delivery | Python analytics + desktop GUI |
 
-Data Imputation:
-The data imputation folder tests the accuracy of the models, and then uses to impute data.
+The mark was verified against the final academic transcript, page 2, issued 15 January 2025. It applies to the original module assessment. Portfolio maintenance and the web edition dated **14 November 2026** were completed later with AI assistance and were not assessed by Keele.
 
-Prediction model and GUI:
-the folder contains the code for  OLS regression, Elastic Net regression and Decison Trees that were used to try and predict the number of registrations of an event.
+## Latest web edition
 
-Regression models:
-the folder contains the code for  ARIMA, SARIMAX regression and exponetial Smoothing used to forecast the number of bookings.
+[Open the web edition source](web/index.html). **Web edition prepared; Sites deployment pending.** No live Sites URL has been verified yet. Serve the repository locally with `python -m http.server 8000` and open `http://localhost:8000/web/`.
 
-Time series models:
-Logistic regression used to predict how many people would be present at an event based on Elastic Net regression that was used for the forecasting. A GUI was used to present these results.
+The browser workbench uses seven invented weekly counts and descriptive z-scores. It does not run the original regression/classification models or measure their performance.
 
-## Architecture and maintained workflow
+## Skills developed
 
-See [technical architecture, diagrams, engineering decisions, checks and scaling limits](docs/ARCHITECTURE.md). Maintenance dated 11 November 2026 is separate from the original learning/coursework source.
+- Python
+- pandas
+- missing-data analysis
+- regression and classification
+- collaborative development
+- forecasting GUI
 
-## University module reference
+These skills are grounded in the original module and project evidence. They are not claims of production deployment, commercial impact or sole authorship of team work.
 
-Official module title and code: [Keele University MSc Computer Science programme specification, 2023/24](https://www.keele.ac.uk/media/keeleuniversity/sas/qa/pgtprogrammespecifications/pgtprogspecs2023-24/Programme-Specification-Computer-Science-Taught-Masters-2023-24.pdf). Original project material and later maintenance remain distinguished below.
+## Original project and academic documentation
+
+Original application files, GUI structure and data schemas remain in the repository. [Academic document provenance](docs/original/README.md) distinguishes Keele-issued briefs from student-authored submissions. The documents below are the original Keele-issued files from the supplied Desktop archive. They retain their original authorship and notices.
+
+## Engineering documentation
+
+- [System and deployment architecture, decisions, contracts and validation](docs/ENGINEERING.md)
+- [Web edition and verification](web/README.md)
+
+Supporting original repositories should be preserved under `original-work/`: Data-Analytics.
+
+University-authored documents retain their own notices. The repository’s code licence does not automatically license third-party teaching materials or datasets.
