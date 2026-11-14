@@ -1,0 +1,29 @@
+{
+  "code": "CSC-40038",
+  "course_name": "Collaborative Application Development",
+  "mark": 77,
+  "credits": 15,
+  "project": "Conference booking analysis and forecasting",
+  "skills": [
+    "Python",
+    "pandas",
+    "missing-data analysis",
+    "regression and classification",
+    "collaborative development",
+    "forecasting GUI"
+  ],
+  "surface": "Python analytics + desktop GUI",
+  "summary": "Explore conference booking patterns, compare prediction approaches and communicate results through a graphical application.",
+  "flow": [
+    "Conference CSV files",
+    "Cleaning and imputation",
+    "Forecast and classification models",
+    "Prediction GUI"
+  ],
+  "decision": "Preserve the separate analysis, imputation and modelling components. Data preparation must be fitted within each training fold so future observations cannot influence past predictions.",
+  "tradeoff": "A desktop interface supports the original local analysis workflow. A browser edition improves discoverability, while executing the original fitted models would require a separately secured Python service.",
+  "contract": "Input contracts should name event identifier, booking-created date and observation cutoff. Split by event and time, account for zero-booking weeks, and track the provenance of every imputed value.",
+  "limits": "The browser workbench uses seven invented weekly counts and descriptive z-scores. It does not run the original regression/classification models or measure their performance.",
+  "demo": "cad",
+  "github": "https://github.com/jyotheshkar/Collaborative-Application-Development-CSC-40038-Keele-University"
+}
