@@ -1,0 +1,88 @@
+{
+  "source_repository": "jyotheshkar/Data-Analytics",
+  "source_tree_sha": "f5a67780dab53b35d5e8d7ee9d95dbfb627b3a72",
+  "imported_at": "2026-11-14",
+  "files": [
+    {
+      "path": ".github/workflows/maintenance.yml",
+      "sha": "4757c375c4b770f602fbc694c504762df83daf45",
+      "size": 534
+    },
+    {
+      "path": "Analytics1.py",
+      "sha": "a133b31545e708293fb4265d5d350263c80644e2",
+      "size": 1312
+    },
+    {
+      "path": "Analytics2.py",
+      "sha": "d5fb4da43d658a19b3a6bafa4099c0ddf4019860",
+      "size": 1972
+    },
+    {
+      "path": "Analytics3.py",
+      "sha": "dce73be8fbb5ca4872847b81a756b1965b9f7c8f",
+      "size": 2332
+    },
+    {
+      "path": "Analytics4.py",
+      "sha": "37f10a0bccdb5cc2cd092347859c523f71cac701",
+      "size": 3357
+    },
+    {
+      "path": "Analytics5.py",
+      "sha": "f2b40d82136dfa23f20fcb3c3492bdbc775b4531",
+      "size": 3826
+    },
+    {
+      "path": "Analytics6.py",
+      "sha": "14ee64cf31f60048c8f497a2e2ceb0249ec0f484",
+      "size": 3490
+    },
+    {
+      "path": "Analytics7.py",
+      "sha": "bb5c1337af01de44c95e77c29c54e256bb8364af",
+      "size": 3335
+    },
+    {
+      "path": "Analytics8.py",
+      "sha": "43f4052db19b349554993b3e74635d63eccdae9c",
+      "size": 3205
+    },
+    {
+      "path": "Analytics9.py",
+      "sha": "9f0f82749a9416d9c4a974a27a3ed372c28baeaa",
+      "size": 4266
+    },
+    {
+      "path": "FinalAnalytics.py",
+      "sha": "960228d20df72c69f5fe071960a59badbccaf553",
+      "size": 7229
+    },
+    {
+      "path": "Installations & packages",
+      "sha": "fb39f993e63ef0463f17aa58f6d4285674bc2a11",
+      "size": 4484
+    },
+    {
+      "path": "README.md",
+      "sha": "6936f61260a0573b5b5c6a3ff5729c0b2a2ce475",
+      "size": 2497
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha": "2128f5dbde3182472f34b88afc8d4046d8c3f411",
+      "size": 3508
+    },
+    {
+      "path": "requirements.txt",
+      "sha": "89487e5624d4c6e548ade972f7bf9f42d4327cb3",
+      "size": 68
+    },
+    {
+      "path": "tests/test_summary.py",
+      "sha": "54116cf202152981b52f38ffe176cc576f9bc3ae",
+      "size": 1086
+    }
+  ],
+  "note": "Byte-identical snapshot preserving original work. Original repository and history remain until user confirms deletion."
+}
